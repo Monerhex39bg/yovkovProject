@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аудио записи</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #5f1f00;
+        }
+
+        nav a {
+            color: white;
+            padding: 18px 22px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #702c2c;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-align: center;
+            color: #990000;
+        }
+
+        #audio-container {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .audio-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .audio-item {
+            text-align: center;
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        .audio-img {
+            width: 50%; /* Намалих ширината на снимките до 50% */
+            height: auto;
+            object-fit: cover;
+            margin-top: 10px; /* Разстояние между аудио и снимка */
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* Центриране на снимката */
+        }
+
+        footer {
+            width: 100%;
+            padding: 15px 0;
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>Йордан Йовков</header>
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="works.html">Произведения</a>
+        <a href="gallery.html">Галерия</a>
+        <a href="interactiveMap.html">Интерактивна карта</a>
+        <a href="#">Аудио записи</a>
+    </nav>
+    <div id="audio-container">
+        <h2>Аудио записи на произведения от Йордан Йовков</h2>
+
+        <div class="audio-row">
+            <div class="audio-item">
+                <p><strong>Албена</strong></p>
+                <audio controls>
+                    <source src="audioRecords/albena.mp3" type="audio/mpeg">
+                    Вашият браузър не поддържа аудио елемента.
+                </audio>
+                <img src="photos/albena.jpg" alt="Албена" class="audio-img">
+            </div>
+
+            <div class="audio-item">
+                <p><strong>Шибил</strong></p>
+                <audio controls>
+                    <source src="audioRecords/shibil.mp3" type="audio/mpeg">
+                    Вашият браузър не поддържа аудио елемента.
+                </audio>
+                <img src="photos/shibil.jpg" alt="Шибил" class="audio-img">
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2025 Йордан Йовков</footer>
+</body>
+</html>

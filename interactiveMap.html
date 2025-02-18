@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивна карта</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #5f1f00;
+        }
+
+        nav a {
+            color: white;
+            padding: 18px 22px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #702c2c;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-align: center;
+            color: #990000;
+        }
+
+        #map-container {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #map {
+            width: 80%;
+            height: 500px;
+            margin: 0 auto;
+            border: 2px solid #5f1f00;
+        }
+
+        footer {
+            width: 100%;
+            padding: 15px 0;
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 43.8356, lng: 25.9653 },
+                zoom: 7
+            });
+
+            var locations = [
+                { name: "Жеравна", lat: 42.8333, lng: 26.4667 },
+                { name: "Добрич", lat: 43.5667, lng: 27.8333 },
+                { name: "София", lat: 42.6975, lng: 23.3242 }
+            ];
+
+            locations.forEach(function(location) {
+                new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.name
+                });
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRKQlKWj2dGXuEJMUr-LEMUbTjwjM61iM&callback=initMap"></script>
+</head>
+<body>
+    <header>Йордан Йовков</header>
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="works.html">Произведения</a>
+        <a href="gallery.html">Галерия</a>
+        <a href="#">Интерактивна карта</a>
+        <a href="audioRecords.html">Аудио записи</a>
+    </nav>
+    <div id="map-container">
+        <h2>Интерактивна карта на Йордан Йовков</h2>
+        <p>Разгледайте ключовите места, свързани с живота и творчеството на Йордан Йовков.</p>
+        <div id="map"></div>
+    </div>
+    <footer>&copy; 2025 Йордан Йовков</footer>
+</body>
+</html>

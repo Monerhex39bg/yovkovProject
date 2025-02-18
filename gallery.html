@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #5f1f00;
+        }
+
+        nav a {
+            color: white;
+            padding: 18px 22px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #702c2c;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-align: center;
+            color: #990000;
+        }
+
+        #gallery {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .image-container p {
+            margin-top: 10px;
+            font-style: italic;
+            color: #5f1f00;
+        }
+
+        footer {
+            width: 100%;
+            padding: 15px 0;
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>Йордан Йовков</header>
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="works.html">Произведения</a>
+        <a href="#">Галерия</a>
+        <a href="interactiveMap.html">Интерактивна карта</a>
+        <a href="audioRecords.html">Аудио записи</a>
+    </nav>
+    <div id="gallery">
+        <h2>Галерия</h2>
+        <section>
+            <div class="image-container">
+                <img src="photos/yovkov.jpg" alt="Йордан Йовков" title="Йордан Йовков">
+                <p>Йордан Йовков</p>
+            </div>
+            <div class="image-container">
+                <img src="photos/yovkovBook.jpg" alt="Книга на Йовков" title="Книга на Йовков">
+                <p>Книга на Йовков</p>
+            </div>
+            <div class="image-container">
+                <img src="photos/indje.jpg" alt="Ръкопис на Йовков" title="Ръкопис на Йовков (Индже)">
+                <p>Ръкопис на Йовков (Индже)</p>
+            </div>
+        </section>
+    </div>
+    <footer>&copy; 2025 Йордан Йовков</footer>
+</body>
+</html>

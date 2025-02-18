@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Произведения</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #5f1f00;
+        }
+
+        nav a {
+            color: white;
+            padding: 18px 22px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #702c2c;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-align: center;
+            color: #990000;
+        }
+
+        #works {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .work {
+            text-align: center;
+            flex: 1;
+        }
+
+        .work img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .work p {
+            font-style: italic;
+            color: #5f1f00;
+        }
+
+        footer {
+            width: 100%;
+            padding: 15px 0;
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>Йордан Йовков</header>
+    <nav>
+        <a href="index.html">Начало</a>
+        <a href="#">Произведения</a>
+        <a href="gallery.html">Галерия</a>
+        <a href="interactiveMap.html">Интерактивна карта</a>
+        <a href="audioRecords.html">Аудио записи</a>
+    </nav>
+    <div id="works">
+        <h2>Произведения на Йордан Йовков</h2>
+        <p>Йовков е известен с произведения като "Албена", "Старопланински легенди", "Шибил"...</p>
+
+        <section>
+            <div class="work">
+                <img src="photos/albena.jpg" alt="Албена - Йордан Йовков" title="Албена - Йордан Йовков">
+                <p>Албена</p>
+            </div>
+            <div class="work">
+                <img src="photos/staroplaninskiLegendi.jpg" alt="Старопланински легенди - Йордан Йовков" title="Старопланински легенди - Йордан Йовков">
+                <p>Старопланински легенди</p>
+            </div>
+            <div class="work">
+                <img src="photos/shibil.jpg" alt="Шибил - Йордан Йовков" title="Шибил - Йордан Йовков">
+                <p>Шибил</p>
+            </div>
+        </section>
+    </div>
+    <footer>&copy; 2025 Йордан Йовков</footer>
+</body>
+</html>
